@@ -18,7 +18,7 @@ body,html {
     scroll-behavior: smooth;
 }
 body {
-    overflow: hidden; /* Prevents extra scrollbar */
+    overflow: hidden;
 }
 @keyframes fadeIn {
     0% {
