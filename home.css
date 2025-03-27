@@ -671,7 +671,7 @@ a.button:hover {
     justify-content: space-between; /* Space between copyright and links */
     align-items: center; /* Center vertically */
     margin-top: auto;
-    display: none;
+    display: block;
   }
   
   .footer-content {
