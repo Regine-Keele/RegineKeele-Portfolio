@@ -705,7 +705,6 @@ a.button:hover {
 
 
 @media (max-width: 1200px) and (min-height: 1000px) {
-
     .logo-img {
         margin-left: 0px;
     }
@@ -722,6 +721,8 @@ a.button:hover {
         height: 400px !important; 
         width: 400px !important;
     }
+
+
 
     .button-container {
         display: flex;
@@ -1014,8 +1015,23 @@ a.button:hover {
 }
 
 @media (max-width: 1470px) {
+    .home-container {
+        margin-bottom: 50px;
+    }
+
     .logo-img {
         margin-left: 0px;
+    }
+
+    .left-section p {
+        font-size: 1rem; 
+        text-align: center; 
+        width: 100%;  /* Ensure full width */
+        display: flex;
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center (if needed) */
+        margin: 0 auto; /* Remove unwanted margins */
+        margin-bottom: 50px;
     }
 
     .project-card {
