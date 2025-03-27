@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,html {
+    animation: fadeIn 2s forwards, color 20s ease-in-out infinite;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(40deg,  #df7940, #fdf8f0);
+    background-size: 300% 300%;
+    font-family: "Poppins", serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+}
+nav {
+    background-color: none;
+    /*box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);*/
+}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav li {
+    height: 90px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #222222;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fdf8f0;
+}
+
+
+.logo a {
+    display: flex; /* Makes text and image align properly */
+    align-items: center; /* Vertically centers items */
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps default text color */
+}
+
+.logo-img {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 8px; /* Space between image and text */
+}
+nav li:first-child {
+    margin-right: auto;
+}
+
+.contact{
+    margin-right: 50px;
+}
+
+nav li.nav-active a {
+    color: #fdf8f0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #df7940;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+nav li.menu:hover svg {
+    fill: #fdf8f0;
+}
+
+.menu-button {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+.outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Instead of flex-start */
+    margin: 30px auto; /* Center the content */
+    padding: 0 40px; /* Add some padding */
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px; /* Remove fixed margin */
+}
+/*.outer, .container {
+    max-width: 100%;
+    margin: auto;
+}*/
+h1{
+    margin-bottom: 30px;
+    font-family: "Yeseva One", serif;
+    font-size: 50px;
+}
+.info-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    height: 70px;
+    width: 600px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.info-container p {
+    font-size: 16px;
+    color: #222222;
+    margin: 0;
+    margin-left: 30px;
+}
+
+.info-container svg {
+    display: inline-block; 
+    width: 40px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    margin-right: 10px; /* Optional: space between image and text */
+    margin-left: 30px;
+
+}
+
+.info-container:hover {
+    transform: translateY(-5px);
+}
+
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust spacing between buttons */
+    justify-content: center;
+}
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px; /* Circle size */
+    height: 70px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    background-color: #333; /* Default color */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    overflow: visible;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: black;
+    color: #df7940;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(255, 153, 0, 0.3);
+}
+
+.btn::after {
+    content: "\f061"; /* Font Awesome diagonal arrow */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: -20px; /* Position the arrow */
+    left: 70%; /* Shift arrow slightly to the right */
+    transform: translateX(-40%) rotate(-45deg); /* Adjust positioning */
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+}
+
+/* Show the arrow on hover */
+.btn:hover::after {
+    opacity: 1;
+    bottom: -15px; /* Moves arrow closer */
+}
+
+/* Optional: Add different background colors for each button */
+.github { background-color: #333; color: white; }
+.linkedin { background-color: #0077b5; color: white; }
+.skype { background-color: #00aff0; color: white; }
+.facebook { background-color: #1877f2; color: white; }
+.instagram { background-color: #e4405f; color: white; }
+.tiktok { background-color: #010101; color: white; }
+
+/*-------------For Footer---------*/
+.footer-container {
+    background-color: none; /* Dark background */
+    color: #0000006f; /* Light text color */
+    padding: 40px; /* Space around the footer */
+    display: flex;
+    justify-content: space-between; /* Space between copyright and links */
+    align-items: center; /* Center vertically */
+    margin-top: auto;
+    display: block;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Push content to left and right */
+    width: 100%; /* Occupy full width */
+  }
+  
+  .footer-copyright {
+    margin: 0;
+    font-size: 14px;
+    color: #0000006f; /* Subtle color for copyright */
+  }
+  
+  .footer-links {
+    display: flex; /* Arrange links horizontally */
+    gap: 20px; /* Add space between links */
+  }
+  
+  .footer-links a {
+    color: #0000006f; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .footer-links a:hover {
+    color: #ff7c3f; /* Accent color on hover */
+  }
+
+
+
+  @media (max-width: 900px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .outer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        text-align: center;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        max-width: 1000px; /* Increased width */
+        margin: 0 auto;
+    }
+
+
+    .info-container {
+        text-align: left; /* Ensure text is left-aligned */
+        width: 500px;
+        max-width: 1000px; /* Increased width */
+        padding: 15px;
+        gap: 15px; /* More spacing between icon and text */
+    }
+
+    .info-container svg {
+        width: 35px; /* Increased icon size */
+        height: 35px;
+    }
+
+    .info-container p {
+        font-size: 16px; /* Increased text size */
+        margin: 0;
+        text-align: left; /* Ensure text stays aligned to the left */
+    }
+
+    .social-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 45px; /* Slightly bigger */
+        height: 45px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-container {
+        padding: 15px;
+        font-size: 12px; /* Slightly bigger for readability */
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 620px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .outer {
+        display: flex; /* Ensure it is a flex container */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        text-align: center; /* Align text */
+        width: 100%; /* Ensure it takes full width */
+        height: auto; /* Allow it to expand */
+        margin: 0 auto; /* Center it */
+        margin-top: 50px;
+    }
+    .info-container {
+        text-align: left; /* Ensure text is left-aligned */
+        width: 500px;
+        max-width: 300px; /* Increased width */
+        padding: 15px;
+        gap: 0px; /* More spacing between icon and text */
+    }
+    .info-container p {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .info-container svg {
+        width: 25px; /* Increased icon size */
+        height: 25px;
+    }
+    
+    .btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .footer-container {
+        padding: 15px;
+        font-size: 10px;
+    }
+}

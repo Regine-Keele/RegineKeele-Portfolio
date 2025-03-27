@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- Include Google Fonts for Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- External CSS-->
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="logo">
+                <a href="#">
+                    <img src="assets/Keele.png" alt="KEELE Logo" class="logo-img">
+                </a>
+            </li>
+            <li class="hideOnMobile" class="nav-link"><a href="#home" >Home</a></li>
+            <li class="hideOnMobile" class="nav-link"><a href="#about">About</a></li>
+            <li class="hideOnMobile" class="nav-link"><a href="#portfolio">Portfolio</a></li>
+            <li class="hideOnMobile contact"><a href="contact.html">Contact</a></li>
+            <li onclick=showSidebar() class="menu menu-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+
+        <ul class="sidebar">
+            <li onclick=hideSidebar() class="menu"><a href="#"><b><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#000000">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></b></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="home-container scroll-animate">
+        <div class="intro-container">
+            <div class="left-section">
+                <h1> Hello, I'm&nbsp;<span style="color: #df7940;">Regine Keele</span>!</h1>
+                <p> BS Computer Science Student</p>
+                <div class="button-container">
+                    <a href="#about" class="button b1">More About Me</a>
+                    <a href="#" class="button b2">Download my CV</a>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="me-container">
+                    <img class="me" src="../assets/me.jpg" alt="My Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="scroll-animate about-container">
+        <div class="about-content text-center">
+            <h2 class="mb-3">WHO AM I?</h2>
+            <p class="mb-5">
+                I am a 22 year old Computer Science student known for a positive attitude, a passion for tackling
+                challenges, and a commitment to continuous learning and growth. My academic background, along with
+                hands-on project experience, has honed my ability to solve problems and develop effective strategies.
+            </p>
+            <p class="mb-5">
+                I excel at time management, balancing studies with personal growth, and thrive in collaborative
+                environments. Eager to expand my knowledge, I am ready to embrace new challenges and apply my skills to
+                create innovative solutions that make a meaningful impact.
+
+            </p>
+            <!-- WHO AM I Container -->
+            <div class="container mt-5 mb-5">
+                <div class="row d-flex justify-content-center flex-nowrap">
+                    <div class="col-md-4">
+                        <div class="card text-center p-3 custom-card scroll-animate">
+                            <i class="bi bi-code-slash fs-1 text-primary"></i>
+                            <h5 class="mt-3 mx-2 my-2">Full-Stack Developer</h5>
+                            <p>Building scalable and efficient web applications.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center p-3 custom-card scroll-animate">
+                            <i class="bi bi-server fs-1 text-success"></i>
+                            <h5 class="mt-3">Database Management</h5>
+                            <p>Handling database design, queries, and optimization.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center p-3 custom-card scroll-animate">
+                            <i class="bi bi-brush fs-1 text-danger"></i>
+                            <h5 class="mt-3 mx-2 my-2">UI/UX Development</h5>
+                            <p>Creating user-friendly and visually appealing interfaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-container">
+            <h2 class="scroll-animate">My Tech Stack</h2>
+            <div class="container text-center mt-4">
+                <div class="d-flex flex-wrap justify-content-center skills-custom">
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                        Java</div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python"> Python</div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML"> HTML</div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        CSS</div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript"> JavaScript</div>
+                    <div class="skill-item scroll-animate">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
+                            alt="Laravel"> Lumen
+                    </div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"> PHP
+                    </div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL"> MySQL</div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                            alt="Angular"> Angular</div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js"> Node.js</div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub"> GitHub</div>
+                    <div class="skill-item scroll-animate"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap"> Bootstrap</div>
+                    <div class="skill-item scroll-animate">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira">
+                        Jira
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="education" class="education-container">
+            <h2 class="text-center mb-3 scroll-animate">Educational Background</h2>
+
+            <!-- Timeline -->
+            <div class="timeline-container scroll-animate">
+                <div class="timeline">
+                    <div class="timeline-circle left">
+                        <img src="assets/hau.png" alt="College Logo">
+                    </div>
+                    <div class="timeline-circle center">
+                        <img src="assets/hfa.png" alt="High School Logo">
+                    </div>
+                    <div class="timeline-circle right">
+                        <img src="assets/lmsi.png" alt="Elementary Logo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Cards -->
+            <!-- Education Cards -->
+            <div class="container text-center mt-4">
+                <div class="row justify-content-center">
+                    <!-- College -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="edu-card scroll-animate">
+                            <h5>College</h5>
+                            <h3>Holy Angel University</h3>
+                            <p><strong>2021 - Present</strong></p>
+                            <p>College (School of Computing)</p>
+                            <ul>
+                                <li>1st S.Y. - President’s Lister (GWA: 1.083, 1.071)</li>
+                                <li>2nd S.Y. - President’s Lister (GWA: 1.107, 1.094)</li>
+                                <li>3rd S.Y. - President’s Lister (GWA: 1.071, 1.136)</li>
+                                <li>4th S.Y. - President’s Lister (GWA: 1.071)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- High School -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="edu-card scroll-animate">
+                            <h5>High School</h5>
+                            <h3>Holy Family Academy</h3>
+                            <p><strong>2015 - 2021</strong></p>
+                            <ul>
+                                <li>Senior High School (STEM) - With Highest Honors</li>
+                                <li>Junior High School - With Distinction</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Elementary -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="edu-card scroll-animate">
+                            <h5>Elementary</h5>
+                            <h3>L’Altra Montessori School</h3>
+                            <p><strong>2009 - 2015</strong></p>
+                            <ul>
+                                <li>Elementary - With Honors</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div id="work-experience" class="work-container">
+            <h2 class="text-center mb-3 scroll-animate">Work Experience</h2>
+
+            <!-- Work Experience Card -->
+            <div class="container text-center mt-4">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="work-card scroll-animate">
+                            <h5>Internship</h5>
+                            <h3>Clark Outsourcing</h3>
+                            <p><strong>2024 - 2025</strong></p>
+                            <ul>
+                                <li>Full-stack Developer, working with Angular and Lumen.</li>
+                                <li>Assisted in software development tasks and debugging.</li>
+                                <li>Implemented CRUD operations and managed tasks using JIRA.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="portfolio" class="portfolio-section text-center">
+        <h2 class="mb-4 mt-5 scroll-animate"><span style="color: #df7940;">My Academic Projects</span></h2>
+        <div class="row mx-5 my-5 g-5 mt-4 d-flex flex-wrap justify-content-center">
+
+            <!-- Project 1 -->
+            <div class="col-md-6 col-sm-12">
+                <div class="scroll-animate project-card p-3 d-flex align-items-center">
+                    <img src="assets/kauth.png" alt="Project One" class="project-img">
+                    <div class="project-details ms-3">
+                        <div class="tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <h4 class="mt-2">KAUTH (THESIS)</h4>
+                        <p>Created a Counterfeit Banknote Detection Mobile Application utilizing image processing and a
+                            CNN-based Xception model to identify fake currency.</p>
+                        <a href="https://github.com/Regine-Keele/KAuth" class="btn-view">
+                            <i class="fa-brands fa-github"></i>&nbsp; View Repo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6 col-sm-12">
+                <div class="scroll-animate project-card p-3 d-flex align-items-center">
+                    <img src="assets/pawmate.png" alt="Project Two" class="project-img">
+                    <div class="project-details ms-3">
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Cloud</span>
+                        </div>
+                        <h4 class="mt-2">PawMate</h4>
+                        <p>Developed a pet adoption web app with an admin dashboard for tracking visitor demographics,
+                            and hosted on AWS EC2.</p>
+                        <a href="https://github.com/Regine-Keele/Pawmate" class="btn-view">
+                            <i class="fa-brands fa-github"></i>&nbsp; View Repo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-6 col-sm-12">
+                <div class="scroll-animate project-card p-3 d-flex align-items-center">
+                    <img src="assets/skimata.png" alt="Project Three" class="project-img">
+                    <div class="project-details ms-3">
+                        <div class="tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                        <h4 class="mt-2">Skimata</h4>
+                        <p>Developed a web tool using JavaScript, HTML, and CSS to visualize allocation algorithms,
+                            enhancing understanding of memory and CPU management.</p>
+                        <a href="https://github.com/Regine-Keele/Skimata" class="btn-view">
+                            <i class="fa-brands fa-github"></i>&nbsp; View Repo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-md-6 col-sm-12">
+                <div class="scroll-animate project-card p-3 d-flex align-items-center">
+                    <img src="assets/HAUthenticred.png" alt="Project Four" class="project-img">
+                    <div class="project-details ms-3">
+                        <div class="tags">
+                            <span class="tag">Ethereum</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                        <h4 class="mt-2">HAUthentiCred</h4>
+                        <p>A blockchain-based academic credential system for secure certificate storage and validation,
+                            enabling student uploads and teacher verification via smart contracts. </p>
+                        <a href="https://github.com/Regine-Keele/HAUthentiCred" class="btn-view">
+                            <i class="fa-brands fa-github"></i>&nbsp; View Repo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-md-6 col-sm-12">
+                <div class="scroll-animate project-card p-3 d-flex align-items-center">
+                    <img src="assets/sports.png" alt="Project Five" class="project-img">
+                    <div class="project-details ms-3">
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">BlueJ</span>
+                        </div>
+                        <h4 class="mt-2">Equipment Rental</h4>
+                        <p>Developed a Java-based sports equipment rental management app in BlueJ, handling inventory,
+                            transactions, and rentals with OOP principles.</p>
+                        <a href="https://github.com/Regine-Keele/SportsRental" class="btn-view">
+                            <i class="fa-brands fa-github"></i>&nbsp; View Repo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <p class="footer-copyright">&copy; 2024 Regine Keele</p>
+            <div class="footer-links">
+                <a href="home.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = "flex"
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector(".sidebar")
+            sidebar.style.display = "none"
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+        <script src="home.js"></script>
+</body>
+
+</html>
